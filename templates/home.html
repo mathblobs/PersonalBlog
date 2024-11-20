@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Personal Blog</h1>
+
+
+    
+    
+    <ul>
+        {% for item_id in data.keys() %}
+            <h3><a href="{{ url_for('article_side', item_id=item_id) }}">{{ data[item_id]["title"] }}</a></h3>
+            
+            <br>
+        {% endfor %}
+    </ul>
+    
+    
+    
+    
+    <!--
+    
+
+    <form class="input-group mb-3 my-form" action="" method="POST"></form>
+        <h2><a href="{{ url_for('article_side') }}">First Article</a></h2>
+    </form>
+
+
+    <form class="input-group mb-3 my-form" action="" method="POST">
+        <input type="text" name="ideen" class="form-control" placeholder="Was ist die Idee?">
+        <button class="btn btn-outline-secondary" type="submit">Eingeben</button>
+    </form> 
+
+
+
+    
+    <div class="container">
+
+<button {{ url_for('article_side', item_id='item1') }}>Item 1</button>
+
+        {% for msg in messages %}
+        <div class="d-flex {%if msg.id % 2 == 0%} justify-content-end mt-5 {% else %} justify-content-start {% endif %} mt-5">
+            <div class="card">
+                <div class="card-body">
+                    {{  msg.idee }},  {{msg.machbarkeit }},  {{ msg.wertvoll }} 
+                    <span class="msg-date">{{ msg.machbarkeit }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    
+    </div>
+    -->
+</body>
+</html>
